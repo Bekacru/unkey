@@ -1,0 +1,62 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/images/landing/bg.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.5;
+}
+
+.content {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(
+      at 27% 37%,
+      rgb(2, 2, 2) 0px,
+      transparent 10%
+    ),
+    radial-gradient(at 97% 21%, rgb(239, 241, 239) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, rgb(239, 239, 239) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, rgb(255, 255, 255) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, rgb(255, 255, 255) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, rgb(235, 235, 237) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, rgb(255, 255, 255) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 import { NavigationBar } from "@/components/Navbar";
+import Background from "@/components/landing/background";
 
 export default function LandingLayout({
   children,
@@ -6,7 +7,8 @@ export default function LandingLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen relative">
+      <Background />
       <NavigationBar />
       {children}
     </div>
