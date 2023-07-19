@@ -19,7 +19,9 @@ function newId(prefix: "api" | "ws") {
   crypto.getRandomValues(buf);
   return [
     prefix,
-    baseX("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz").encode(buf),
+    baseX("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz").encode(
+      buf
+    ),
   ].join("_");
 }
 
@@ -61,4 +63,4 @@ async function main() {
   console.log(`Created API: ${prodApi.name} with id: ${prodApi.id}`);
 }
 
-main();
+// main();
