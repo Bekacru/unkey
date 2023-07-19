@@ -63,4 +63,4 @@ async function main() {
   console.log(`Created API: ${prodApi.name} with id: ${prodApi.id}`);
 }
 
-// main();
+main();
